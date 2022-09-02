@@ -1,0 +1,55 @@
+const puppeteer = require('puppeteer')
+const fs = require('node:fs/promises');
+const { get } = require('http');
+const { cluster } = require('puppeteer-cluster');
+
+async function start() {
+    const browser = await puppeteer.launch({ headless: false })
+    const page = await browser.newPage();
+
+    await page.goto("https://practitioners.health.gov.il/Practitioners");
+    await page.waitForSelector("div.cardDiv.ng-star-inserted mat-card");
+    let allSpecialties = await page.$$("div.cardDiv.ng-star-inserted");
+    await allSpecialties[0].click();
+    let totalPageLabels = []
+
+    do {
+
+        await page.waitForSelector("div:nth-child(1) > div.propertyValueDiv > label");
+
+        let newLabelArray = await page.$$eval("div:nth-child(1) > div.propertyValueDiv > label", (txt) => {
+            return txt.map(x => x.innerText);
+        });
+
+        console.log(newLabelArray[0]);
+        totalPageLabels.unshift(newLabelArray);
+        console.log(totalPageLabels[0][0]);
+
+        await page.click(".mat-paginator-navigation-next.mat-icon-button");
+
+        console.log("end of list");
+
+
+    } while (await page.$(".mat-paginator-navigation-next.mat-icon-button path") != null);
+    //IDEA 1
+    //page.click("selector") return ediyor true false denemesi yapilabilir!
+    //promise resolve ederse return 1 and if the condition is equal to 1 then continue the loop if not break
+
+
+    /*await Promise.all([
+           page.waitForNavigation({ waitUntil: 'load' }),
+           page.click(".mat-paginator-navigation-next.mat-icon-button"),
+       ]);*/
+    let doctorNames = [];
+
+    for (let pageLabels = 0; pageLabels < totalPageLabels.length; pageLabels++) {
+        for (let labels = 0; labels < totalPageLabels[pageLabels].length; labels += 6) {
+            doctorNames.push(totalPageLabels[pageLabels][labels]);
+            console.log(doctorNames.length);
+        }
+    }
+
+    await browser.close();
+
+}
+start();

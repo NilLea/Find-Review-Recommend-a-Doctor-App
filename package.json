@@ -1,0 +1,21 @@
+{
+    "name": "ddra",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./bin/www",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "devstart": "SET DEBUG=myapp:* & nodemon ./bin/www"
+
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.1",
+        "puppeteer": "^15.4.0",
+        "puppeteer-cluster": "^0.23.0",
+        "sqlite3": "^5.0.11"
+    },
+    "description": ""
+}
