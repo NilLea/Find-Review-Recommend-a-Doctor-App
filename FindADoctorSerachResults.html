@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>"FIND YOUR DOCTORS"</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="top-section">
+
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="search-area">
+
+            <div class="search-bar">
+
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="Search with name, condition or speciality">
+                <i class="material-icons">navigation</i>
+                <input type="text" placeholder="location">
+                <button type="submit" class="search-button">SEARCH</button>
+
+
+            </div>
+
+            <div class="filter-sort">
+                <label for="kupat holim filter">Kupat Holim </label>
+                <select name="kupat holim filter" id="kupat-holim filter">
+                    <option name="Empty"></option>
+                    <option name="Macabbi">Maccabi</option>
+                    <option name="Klalit">Klalit</option>
+                    <option name="Meyuhedet">Meyuhedet</option>
+                    <option name="Others">Others</option>
+                </select>
+
+                <label for="spoken languages filter">Spoken Languages</label>
+                <select name="languages filter" id="languages filter">
+                    <option name="Empty"></option>
+                    <option name="Hebrew">Hebrew</option>
+                    <option name="English">English</option>
+                    <option name="Arabic">Arabic</option>
+                    <option name="Russian">Russian</option>
+                    <option name="French">French</option>
+                </select>
+
+                <label for="sort the list">Sort</label>
+                <select name="sort" id="sort">
+                    <option name="Empty"></option>
+                    <option name="Ascending">Name Ascending</option>
+                    <option name="Descending">Name Descending</option>
+                    <option name="Years Experience">Years of Experience</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="total-results">
+            <h3><span>#</span>of results found</h3>
+        </div>
+    </div>
+
+    <div class="search-results-scroll">
+
+        <div class="doctors-card">
+
+            <div class="rating-review-numbers">
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <span class="total-ratings"> (#) </span>
+            </div>
+
+            <div class="rating-review-call-to-action">
+                <button type="button" onclick="location.href='#'">Read Reviews</button>
+                <button type="button" onclick="location.href='#'">Write a Review</button>
+                <button type="button" onclick="location.href='#'">Recommend</button>
+            </div>
+
+            <div class="share-save-call-to-action">
+                <i class="fa fa-share-alt"></i>
+                <i class='far fa-bookmark'></i>
+            </div>
+
+            <div class="primary-doctors-info">
+                <div class="card-photo">
+                    <img src="pictures database" alt="Name, Surname, Title">
+                </div>
+                <div class="card-owner-primary-info">
+                    <h3>Name, Surname, Title</h3>
+                    <h4>Specialty and Expertise</h4>
+                </div>
+            </div>
+            <div class="secondary-doctors-info">
+                <ul class="doctor-details">
+                    <li>Kupat Holim
+                        <span>...</span>
+                    </li>
+                    <li>Private Clinique
+                        <span>...</span>
+                    </li>
+                    <li>Adress
+                        <span>...</span>
+                    </li>
+                    <li>Phone
+                        <span>...</span>
+                    </li>
+                    <li>Email
+                        <span>...</span>
+                    </li>
+                    <li>Years of Service
+                        <span>...</span>
+                    </li>
+                    <li>Publications
+                        <span>...</span>
+                    </li>
+            </div>
+
+        </div>
+
+        <div class="doctors-card">
+            <a href="./DoctorsProfile.html" class="overlay-card-link"></a>
+            <div class="rating-review-numbers">
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <span class="total-ratings"> (#) </span>
+            </div>
+
+            <div class="rating-review-call-to-action">
+                <button type="button" onclick="location.href='#'">Read Reviews</button>
+                <button type="button" onclick="location.href='#'">Write a Review</button>
+                <button type="button" onclick="location.href='#'">Recommend</button>
+            </div>
+
+            <div class="share-save-call-to-action">
+                <i class="fa fa-share-alt"></i>
+                <i class='far fa-bookmark'></i>
+            </div>
+
+            <div class="primary-doctors-info">
+                <div class="card-photo">
+                    <img src="pictures database" alt="Name, Surname, Title">
+                </div>
+                <div class="card-owner-primary-info">
+                    <h3>Name, Surname, Title</h3>
+                    <h4>Specialty and Expertise</h4>
+                </div>
+            </div>
+            <div class="secondary-doctors-info">
+                <ul class="doctor-details">
+                    <li>Kupat Holim
+                        <span>...</span>
+                    </li>
+                    <li>Private Clinique
+                        <span>...</span>
+                    </li>
+                    <li>Adress
+                        <span>...</span>
+                    </li>
+                    <li>Phone
+                        <span>...</span>
+                    </li>
+                    <li>Email
+                        <span>...</span>
+                    </li>
+                    <li>Years of Service
+                        <span>...</span>
+                    </li>
+                    <li>Publications
+                        <span>...</span>
+                    </li>
+            </div>
+
+        </div>
+
+        <div class="doctors-card">
+            <div class="rating-review-numbers">
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <span class="total-ratings"> (#) </span>
+            </div>
+
+            <div class="rating-review-call-to-action">
+                <button type="button" onclick="location.href='#'">Read Reviews</button>
+                <button type="button" onclick="location.href='#'">Write a Review</button>
+                <button type="button" onclick="location.href='#'">Recommend</button>
+            </div>
+
+            <div class="share-save-call-to-action">
+                <i class="fa fa-share-alt"></i>
+                <i class='far fa-bookmark'></i>
+            </div>
+
+            <div class="primary-doctors-info">
+                <div class="card-photo">
+                    <img src="pictures database" alt="Name, Surname, Title">
+                </div>
+                <div class="card-owner-primary-info">
+                    <h3>Name, Surname, Title</h3>
+                    <h4>Specialty and Expertise</h4>
+                </div>
+            </div>
+            <div class="secondary-doctors-info">
+                <ul class="doctor-details">
+                    <li>Kupat Holim<span>...</span></li>
+                    <li>Private Clinique
+                        <span>...</span>
+                    </li>
+                    <li>Adress
+                        <span>...</span>
+                    </li>
+                    <li>Phone
+                        <span>...</span>
+                    </li>
+                    <li>Email
+                        <span>...</span>
+                    </li>
+                    <li>Years of Service
+                        <span>...</span>
+                    </li>
+                    <li>Publications
+                        <span>...</span>
+                    </li>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
